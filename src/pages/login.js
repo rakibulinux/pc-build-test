@@ -21,14 +21,14 @@ const LoginPage = () => {
           <GoogleOutlined
             onClick={() =>
               signIn("google", {
-                callbackUrl: "http://localhost:3000",
+                callbackUrl: "https://pc-builder-green.vercel.app",
               })
             }
           />
           <GithubOutlined
             onClick={() =>
               signIn("github", {
-                callbackUrl: `http://localhost:3000`,
+                callbackUrl: `https://pc-builder-green.vercel.app`,
               })
             }
           />
