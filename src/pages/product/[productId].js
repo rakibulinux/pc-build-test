@@ -5,8 +5,7 @@ import React from "react";
 const ProductDetailsPage = ({ products }) => {
   const product = products[0];
   return (
-    <div className="min-h-screen">
-      <h1>{product?.productName}</h1>
+    <div className="min-h-screen my-4 w-11/12 mx-auto">
       <ProductDetails product={product} />
     </div>
   );

@@ -14,7 +14,6 @@ const HomePage = ({ products }) => {
     "storage_device",
     "monitor",
   ];
-  console.log(products);
   return (
     <div>
       <Head>

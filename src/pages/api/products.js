@@ -17,7 +17,6 @@ async function run(req, res) {
     const { productId } = req.query;
 
     if (req.method === "GET" && productId) {
-      console.log(productId);
       const product = await productsCollection.findOne({
         _id: new ObjectId(productId),
       });
