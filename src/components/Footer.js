@@ -8,12 +8,12 @@ const Footer = () => {
           <Link
             className="flex-none text-xl font-semibold dark:text-white"
             href="/"
-            aria-label="Brand"
+            aria-label="PC Builder"
           >
-            Brand
+            PC Builder
           </Link>
           <p className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-            © 2022 Preline.
+            © 2023 Rakibulinux.
           </p>
         </div>
 
@@ -458,12 +458,12 @@ const Footer = () => {
               <Link
                 className="flex-none text-xl font-semibold dark:text-white"
                 href="/"
-                aria-label="Brand"
+                aria-label="PC Builder"
               >
-                Brand
+                PC Builder
               </Link>
               <p className="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                © 2022 Preline.
+                © 2023 Rakibulinux.
               </p>
             </div>
 
