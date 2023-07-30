@@ -14,7 +14,7 @@ const HomePage = ({ products }) => {
       </Head>
       <Hero />
       <ProductPage products={products} />
-      {/* <CategoriesPage /> */}
+      <CategoriesPage />
     </div>
   );
 };

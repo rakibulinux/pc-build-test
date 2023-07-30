@@ -1,16 +1,5 @@
-import {
-  ProfileOutlined,
-  MobileOutlined,
-  UserOutlined,
-  FacebookFilled,
-  LinkedinFilled,
-  GoogleSquareFilled,
-  TwitterSquareFilled,
-} from "@ant-design/icons";
-import { Layout, Menu } from "antd";
-const { Header, Content } = Layout;
-import styles from "@/styles/Home.module.css";
-import Link from "next/link";
+import { Layout } from "antd";
+const { Content } = Layout;
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 

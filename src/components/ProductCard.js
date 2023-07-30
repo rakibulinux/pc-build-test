@@ -1,10 +1,8 @@
 import { Card } from "antd";
-import Title from "antd/es/skeleton/Title";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }) => {
-  const { Meta } = Card;
   return (
     <Link
       href={"/product/" + product?.id}
