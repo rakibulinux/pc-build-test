@@ -30,14 +30,14 @@ const Navbar = () => {
         theme="dark"
         mode="horizontal"
         style={{
-          width: "20%",
           display: "flex",
-          fontSize: "20px",
-          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "10px",
         }}
       >
         <Link
-          style={{ textDecoration: "none", color: "white" }}
+          className="hidden md:block"
+          style={{ textDecoration: "none", color: "white", fontSize: "18px" }}
           href="/profile"
         >
           <li>Profile</li>
@@ -50,7 +50,7 @@ const Navbar = () => {
         </Link>
         <DropdownMenu />
         {session?.user ? (
-          <li>
+          <li className="hidden md:block">
             <Button onClick={() => signOut()} type="primary" danger>
               Logout
             </Button>
