@@ -4,6 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 const { Header } = Layout;
 import Link from "next/link";
 import { useAuthState } from "react-firebase-hooks/auth";
+import DropdownMenu from "./Dropdown";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -41,20 +42,27 @@ const Navbar = () => {
           style={{ textDecoration: "none", color: "white" }}
           href="/profile"
         >
-          <items>Profile</items>
+          <li>Profile</li>
         </Link>
+        <Link
+          style={{ textDecoration: "none", color: "white" }}
+          href="/pc-builder"
+        >
+          <Button type="primary">PC Builder</Button>
+        </Link>
+        <DropdownMenu />
         {session?.user || user?.email ? (
-          <items>
+          <li>
             <Button onClick={() => signOut()} type="primary" danger>
               Logout
             </Button>
-          </items>
+          </li>
         ) : (
           <Link
             style={{ textDecoration: "none", color: "white" }}
             href="/login"
           >
-            <items>Login</items>
+            <li>Login</li>
           </Link>
         )}
       </Menu>
