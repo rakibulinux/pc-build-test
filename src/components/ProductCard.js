@@ -1,7 +1,10 @@
+import { Card } from "antd";
+import Title from "antd/es/skeleton/Title";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }) => {
+  const { Meta } = Card;
   return (
     <Link
       href={"/product/" + product?.id}
@@ -18,87 +21,47 @@ const ProductCard = ({ product }) => {
       />
 
       <div className="mt-2">
-        <dl>
-          <div>
-            <p className="text-sm text-gray-500">Price: ${product?.price}</p>
-          </div>
-
-          <div>
-            <dt className="sr-only">Address</dt>
-
-            <dd className="font-medium">123 Wallaby Avenue, Park Road</dd>
-          </div>
-        </dl>
+        <div>
+          <h2 className="text-lg text-gray-800">{product?.productName}</h2>
+        </div>
 
         <div className="mt-6 flex items-center gap-8 text-xs">
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <svg
-              className="h-4 w-4 text-indigo-700"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-              />
-            </svg>
-
-            <div className="mt-1.5 sm:mt-0">
-              <p className="text-gray-500">Parking</p>
-
-              <p className="font-medium">2 spaces</p>
+          <div className="flex flex-row gap-3 ">
+            <div>
+              <p className="text-sm text-gray-500">
+                <span className="font-semibold text-gray-800">Category: </span>
+                {product?.category}
+              </p>
+              <p className="text-sm text-gray-500">
+                <span className="font-semibold text-gray-800">Price: </span> $
+                {product?.price}
+              </p>
+            </div>
+            <div>
+              <p className="text-sm text-gray-500">
+                <span className="font-semibold text-gray-800">Status: </span> $
+                {product?.status}
+              </p>
+              <p className="text-sm text-gray-500">
+                <span className="font-semibold text-gray-800">Rating: </span>
+                {product?.rating}
+              </p>
             </div>
           </div>
 
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <svg
-              className="h-4 w-4 text-indigo-700"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-              />
-            </svg>
-
-            <div className="mt-1.5 sm:mt-0">
-              <p className="text-gray-500">Bathroom</p>
-
-              <p className="font-medium">2 rooms</p>
-            </div>
+          {/* <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+            
           </div>
 
           <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <svg
-              className="h-4 w-4 text-indigo-700"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            </svg>
-
-            <div className="mt-1.5 sm:mt-0">
-              <p className="text-gray-500">Bedroom</p>
-
-              <p className="font-medium">4 rooms</p>
-            </div>
+            
           </div>
+          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+            <p className="text-sm text-gray-500">
+              <span className="font-semibold text-gray-800">Rating: </span>
+              {product?.rating}
+            </p>
+          </div> */}
         </div>
       </div>
     </Link>

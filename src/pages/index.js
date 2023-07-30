@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import RootLayout from "@/components/Layout/RootLayout";
-import ProductCard from "@/components/ProductCard";
 import { useSession } from "next-auth/react";
 import Head from "next/head";
 import ProductPage from "./product";
+import CategoriesPage from "./categories";
 const HomePage = ({ products }) => {
   const { data: session } = useSession();
   console.log(products);
@@ -14,6 +14,7 @@ const HomePage = ({ products }) => {
       </Head>
       <Hero />
       <ProductPage products={products} />
+      {/* <CategoriesPage /> */}
     </div>
   );
 };

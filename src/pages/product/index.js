@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import React from "react";
 
 const ProductPage = ({ products }) => {
   return (
