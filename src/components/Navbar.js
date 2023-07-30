@@ -1,14 +1,12 @@
-import auth from "@/firebase/firebase.auth";
 import { Layout, Menu, Button } from "antd";
 import { signOut, useSession } from "next-auth/react";
 const { Header } = Layout;
 import Link from "next/link";
-import { useAuthState } from "react-firebase-hooks/auth";
 import DropdownMenu from "./Dropdown";
 
 const Navbar = () => {
   const { data: session } = useSession();
-  const [user, loading, error] = useAuthState(auth);
+
   return (
     <Header
       style={{
@@ -51,7 +49,7 @@ const Navbar = () => {
           <Button type="primary">PC Builder</Button>
         </Link>
         <DropdownMenu />
-        {session?.user || user?.email ? (
+        {session?.user ? (
           <li>
             <Button onClick={() => signOut()} type="primary" danger>
               Logout
