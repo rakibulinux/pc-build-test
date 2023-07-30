@@ -6,6 +6,14 @@ import ProductPage from "./product";
 import CategoriesPage from "./categories";
 const HomePage = ({ products }) => {
   const { data: session } = useSession();
+  const categories = [
+    "cpu_processor",
+    "motherboard",
+    "ram",
+    "power_supply_unit",
+    "storage_device",
+    "monitor",
+  ];
   console.log(products);
   return (
     <div>
@@ -14,7 +22,7 @@ const HomePage = ({ products }) => {
       </Head>
       <Hero />
       <ProductPage products={products} />
-      <CategoriesPage />
+      <CategoriesPage categories={categories} />
     </div>
   );
 };
