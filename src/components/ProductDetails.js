@@ -1,9 +1,8 @@
-const ProductDetails = () => {
-  return (
-    <div>
-      <h1>productId</h1>
-    </div>
-  );
+import Image from "next/image";
+import React from "react";
+
+const ProductDetails = ({ product }) => {
+  return <div></div>;
 };
 
 export default ProductDetails;

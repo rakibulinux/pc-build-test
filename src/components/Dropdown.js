@@ -28,7 +28,7 @@ const items = [
   },
   {
     key: "7",
-    label: <Link href="/categories/others">others</Link>,
+    label: <Link href="/categories/">others</Link>,
   },
 ];
 const DropdownMenu = () => {

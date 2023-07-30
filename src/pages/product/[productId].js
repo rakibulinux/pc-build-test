@@ -1,4 +1,5 @@
 import RootLayout from "@/components/Layout/RootLayout";
+import ProductDetails from "@/components/ProductDetails";
 import React from "react";
 
 const ProductDetailsPage = ({ products }) => {
@@ -6,6 +7,7 @@ const ProductDetailsPage = ({ products }) => {
   return (
     <div className="min-h-screen">
       <h1>{product?.productName}</h1>
+      <ProductDetails product={product} />
     </div>
   );
 };
