@@ -4,7 +4,7 @@ import React from "react";
 const PCBuilderPage = () => {
   return (
     <div className="min-h-screen">
-      <h1>pc-builder</h1>
+      <h1 className="text-center">pc-builder</h1>
     </div>
   );
 };
